@@ -19,21 +19,21 @@ $brand-danger: #d9534f;
 $brand-info: #5bc0de;
 
 // Buttons
-$btn-default-color:				#333 !default;
-$btn-default-bg:				#fff !default;
-$btn-default-border:			#ccc !default;
+$btn-default-bg:				transparent !default;
+$btn-default-color:				#fff !default;
+$btn-default-border:			#fff !default;
 
-$btn-primary-bg:				#fff !default;
+$btn-primary-bg:				transparent !default;
 $btn-primary-color:				$brand-primary !default;
-$btn-primary-border:            darken($btn-primary-bg, 5%) !default;
+$btn-primary-border:            $btn-primary-color !default;
 
 $btn-success-bg:				#fff !default;
 $btn-success-color:				$brand-success !default;
 $btn-success-border:			darken($btn-success-bg, 5%) !default;
 
-$btn-info-bg:					#fff !default;
+$btn-info-bg:					transparent !default;
 $btn-info-color:				$brand-info !default;
-$btn-info-border:				darken($btn-info-bg, 5%) !default;
+$btn-info-border:				$btn-info-color !default;
 
 $btn-warning-bg:				transparent !default;
 $btn-warning-color:				$brand-warning !default;
@@ -43,6 +43,8 @@ $btn-danger-bg:					#fff !default;
 $btn-danger-color:				$brand-danger !default;
 $btn-danger-border:				darken($btn-danger-bg, 5%) !default;
 
+// Modal
+$modal-content-bg:				#1d1f2f;
 
 
 $text-color: #333;

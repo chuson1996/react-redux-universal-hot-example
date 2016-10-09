@@ -51,7 +51,7 @@
     color: #ddd;
   }
   p {
-    margin: 10px;
+    margin: 10px 0;
   }
   .humility {
     color: $humility;
@@ -61,6 +61,30 @@
   }
   .github {
     font-size: 1.5em;
+  }
+}
+
+.aboutMe {
+  :global(.modal-dialog) > :global(.modal-content) > :global(.modal-body) > :global(.row) {
+    margin-left: 0;
+  }
+  .left, .right {
+    padding: 15px;
+  }
+  .right {
+    background-color: #fff;
+  }
+  .left {
+    h1, h2, h3, h4, h5, p {
+      color: #fff;
+    }
+
+  }
+  .headline {
+
+  }
+  .subheadline {
+
   }
 }
 

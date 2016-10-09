@@ -21,6 +21,13 @@
   border: 0;
 }
 
+hr.hr-yellow {
+	border-bottom-color: $brand-warning;
+	width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @for $i from 1 through 20 {
 	.m-l-#{$i} {
 		margin-left: 0px + $i;
@@ -52,12 +59,45 @@ a {
 		transition: background-color .5s ease-out, color .5s ease-out, border .5s ease-out;
 		box-shadow: none;
 	}
+	&.hvr-bounce-to-right {
+		&:hover {
+			background-color: transparent;
+		}
+		&:before {
+			background-color: $bg-color;
+		}
+	}
+	&.hvr-sweep-to-top {
+		&:hover {
+			background-color: transparent;
+		}
+		&:before {
+			background-color: $bg-color;
+		}
+	}
+	&.hvr-sweep-to-bottom {
+		&:hover {
+			background-color: transparent;
+		}
+		&:before {
+			background-color: $bg-color;
+		}
+	}
 }
 
 
 // Buttons
 .btn.btn-warning {
 	@include button-variant(#000, $btn-warning-color, #000);
+}
+.btn.btn-primary {
+	@include button-variant(#000, $btn-primary-color, #000);
+}
+.btn.btn-info {
+	@include button-variant(#000, $btn-info-color, #000);
+}
+.btn.btn-default {
+	@include button-variant(#000, $btn-default-color, #000);
 }
 
 // Modal
@@ -71,4 +111,17 @@ a {
 			transform: scale(1);
 		}
 	}
+}
+.modal-backdrop.in {
+	opacity: 0.85;
+}
+.modal-content {
+	border-radius: 0;
+	@include box-shadow(0 0px 27px 0px rgba(101, 97, 0, 0.55));
+}
+.modal-header {
+  border-bottom: 0;
+}
+.modal-body {
+	padding: 0;
 }

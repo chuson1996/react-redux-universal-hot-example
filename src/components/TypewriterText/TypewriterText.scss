@@ -1,0 +1,48 @@
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../theme/variables.scss';
+
+$duration-typing: 500ms;
+$duration-background: 2000ms;
+$delay-unit: 100ms;
+.typewriter {
+	& > span {
+		display: inline-block;
+	}
+	&.animate {
+		> span > i {
+			animation: typewriter $duration-typing forwards, background $duration-background forwards;
+		}
+	}
+	&:hover {
+		> span > i {
+			animation: typewriter $duration-typing forwards, background $duration-background forwards;
+		}
+	}
+	> span > i {
+		opacity: 0;
+		font-style: normal;
+		@for $i from 1 through 30 {
+			&:nth-of-type(#{$i}) {
+				animation-delay: $i*$delay-unit;
+			}
+		}
+	}
+}
+
+@keyframes typewriter {
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes background {
+  0% {
+    //text-shadow: 0 0 2rem $color; // expensive anim
+   background: $brand-warning;
+    //box-shadow: 0 0 4rem rgba($color,.9); // expensive anim
+  }
+  100% {}
+}
