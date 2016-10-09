@@ -1,4 +1,5 @@
-@import "../../theme/variables.scss";
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../theme/variables.scss';
 
 .home {
   dd {
@@ -6,10 +7,15 @@
   }
 }
 .masthead {
-  background: #2d2d2d;
-  padding: 40px 20px;
+  background: $navbar-inverse-bg;
+  background-image: url('./face.jpg');
+  padding: 40px 20px 90px 20px;
   color: white;
-  text-align: center;
+  text-align: left;
+  background-size: 17em;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
   .logo {
     $size: 200px;
     margin: auto;
@@ -35,7 +41,11 @@
   h2 {
     color: #ddd;
     font-size: 2em;
-    margin: 20px;
+    margin: 20px 0;
+  }
+  h3, h4 {
+    color: #ddd;
+    margin: 20px 0 30px 0;
   }
   a {
     color: #ddd;
@@ -54,7 +64,6 @@
   }
 }
 
-.counterContainer {
-  text-align: center;
-  margin: 20px;
+.caseStudy {
+  margin: 40px 20px;
 }

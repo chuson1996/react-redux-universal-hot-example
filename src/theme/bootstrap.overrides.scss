@@ -3,6 +3,8 @@
  *
  */
 
+@import './main.scss';
+
 .navbar-brand {
   position: relative;
   padding-left: 50px;
@@ -13,4 +15,60 @@
 .navbar-default .navbar-nav > .active > a:focus {
   color: #33e0ff;
   background-color: transparent;
+}
+
+.navbar {
+  border: 0;
+}
+
+@for $i from 1 through 20 {
+	.m-l-#{$i} {
+		margin-left: 0px + $i;
+	}
+	.m-r-#{$i} {
+		margin-right: 0px + $i;
+	}
+	.m-t-#{$i} {
+		margin-top: 0px + $i;
+	}
+	.m-b-#{$i} {
+		margin-bottom: 0px + $i;
+	}
+}
+
+a {
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin button-variant($text-color, $bg-color, $border-color) {
+	&:hover {
+		background-color: $bg-color;
+		color: $text-color;
+		border-color: $border-color;
+		transition: background-color .5s ease-out, color .5s ease-out, border .5s ease-out;
+		box-shadow: none;
+	}
+}
+
+
+// Buttons
+.btn.btn-warning {
+	@include button-variant(#000, $btn-warning-color, #000);
+}
+
+// Modal
+.modal-open .modal {
+	.modal-dialog {
+		transform: scale(0.2);
+		transition: transform .3s ease-out;
+	}
+	&.in {
+		.modal-dialog {
+			transform: scale(1);
+		}
+	}
 }

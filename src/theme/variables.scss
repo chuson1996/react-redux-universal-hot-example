@@ -14,11 +14,85 @@ $humility: #777;
 $brand-primary: darken(#428bca, 6.5%);
 $brand-secondary: #e25139;
 $brand-success: #5cb85c;
-$brand-warning: #f0ad4e;
+$brand-warning: #ffd700;
 $brand-danger: #d9534f;
 $brand-info: #5bc0de;
+
+// Buttons
+$btn-default-color:				#333 !default;
+$btn-default-bg:				#fff !default;
+$btn-default-border:			#ccc !default;
+
+$btn-primary-bg:				#fff !default;
+$btn-primary-color:				$brand-primary !default;
+$btn-primary-border:            darken($btn-primary-bg, 5%) !default;
+
+$btn-success-bg:				#fff !default;
+$btn-success-color:				$brand-success !default;
+$btn-success-border:			darken($btn-success-bg, 5%) !default;
+
+$btn-info-bg:					#fff !default;
+$btn-info-color:				$brand-info !default;
+$btn-info-border:				darken($btn-info-bg, 5%) !default;
+
+$btn-warning-bg:				transparent !default;
+$btn-warning-color:				$brand-warning !default;
+$btn-warning-border:			$btn-warning-color !default;
+
+$btn-danger-bg:					#fff !default;
+$btn-danger-color:				$brand-danger !default;
+$btn-danger-border:				darken($btn-danger-bg, 5%) !default;
+
+
 
 $text-color: #333;
 
 $font-size-base: 14px;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+// Misc.
+$misc: (
+	z-index-base:				10000
+);
+
+// Duration.
+$duration: (
+	menu:						0.5s,
+	transition:					0.2s
+);
+
+// Size.
+$size: (
+	element-height:				2.75em,
+	element-margin:				2em,
+	section-spacing:			3em,
+	section-spacing-small:		1.5em,
+	menu:						25em
+);
+
+// Font.
+$font: (
+	family:						('Source Sans Pro', Helvetica, sans-serif),
+	family-fixed:				('Courier New', monospace),
+	family-heading:				('Raleway', Helvetica, sans-serif),
+	weight:						400,
+	weight-bold:				700,
+	weight-heading:				400,
+	weight-heading-bold:		800,
+	weight-heading-extrabold:	900,
+	kerning-heading:			0.25em
+);
+
+// Palette.
+$palette: (
+	bg:							#ffffff,
+	bg-alt:						#f4f4f4,
+	fg:							#646464,
+	fg-bold:					#3c3b3b,
+	fg-light:					#aaaaaa,
+	border:						rgba(160,160,160,0.3),
+	border-bg:					rgba(160,160,160,0.075),
+	border-alt:					rgba(160,160,160,0.65),
+	accent:						#2ebaae
+);
+
+$navbar-height: 56px;

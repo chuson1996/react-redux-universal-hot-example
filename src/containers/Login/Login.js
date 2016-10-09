@@ -1,3 +1,4 @@
+/* globals FB */
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import Helmet from 'react-helmet';
@@ -10,7 +11,8 @@ export default class Login extends Component {
   static propTypes = {
     user: PropTypes.object,
     login: PropTypes.func,
-    logout: PropTypes.func
+    logout: PropTypes.func,
+    fbLogin: PropTypes.func
   }
 
   handleSubmit = (event) => {
@@ -18,6 +20,10 @@ export default class Login extends Component {
     const input = this.refs.username;
     this.props.login(input.value);
     input.value = '';
+  }
+
+  fbLogin = () => {
+    this.props.fbLogin();
   }
 
   render() {
@@ -39,6 +45,7 @@ export default class Login extends Component {
           <p>This will "log you in" as this user, storing the username in the session of the API server.</p>
         </div>
         }
+        <button className="btn btn-primary" onClick={this.fbLogin}>FB LOGIN</button>
         {user &&
         <div>
           <p>You are currently logged in as {user.name}.</p>

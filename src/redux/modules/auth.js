@@ -1,9 +1,13 @@
+/* globals FB */
 const LOAD = 'redux-example/auth/LOAD';
 const LOAD_SUCCESS = 'redux-example/auth/LOAD_SUCCESS';
 const LOAD_FAIL = 'redux-example/auth/LOAD_FAIL';
 const LOGIN = 'redux-example/auth/LOGIN';
 const LOGIN_SUCCESS = 'redux-example/auth/LOGIN_SUCCESS';
 const LOGIN_FAIL = 'redux-example/auth/LOGIN_FAIL';
+const FB_LOGIN = 'redux-example/auth/FB_LOGIN';
+const FB_LOGIN_SUCCESS = 'redux-example/auth/FB_LOGIN_SUCCESS';
+const FB_LOGIN_FAIL = 'redux-example/auth/FB_LOGIN_FAIL';
 const LOGOUT = 'redux-example/auth/LOGOUT';
 const LOGOUT_SUCCESS = 'redux-example/auth/LOGOUT_SUCCESS';
 const LOGOUT_FAIL = 'redux-example/auth/LOGOUT_FAIL';
@@ -51,6 +55,24 @@ export default function reducer(state = initialState, action = {}) {
         user: null,
         loginError: action.error
       };
+    case FB_LOGIN:
+      return {
+        ...state,
+        loggingIn: true
+      };
+    case FB_LOGIN_SUCCESS:
+      return {
+        ...state,
+        loggingIn: false,
+        fbUser: action.result
+      };
+    case FB_LOGIN_FAIL:
+      return {
+        ...state,
+        loggingIn: false,
+        user: null,
+        loginError: action.error
+      };
     case LOGOUT:
       return {
         ...state,
@@ -91,6 +113,38 @@ export function login(name) {
       data: {
         name: name
       }
+    })
+  };
+}
+
+export function fbLogin() {
+  return {
+    types: [FB_LOGIN, FB_LOGIN_SUCCESS, FB_LOGIN_FAIL],
+    promise: () => new Promise((resolve, reject) => {
+      FB.getLoginStatus((response) => {
+        if (response.status === 'connected') {
+          return resolve(response.authResponse);
+        }
+
+        FB.login(
+          (res) => {
+            if (!res.authResponse) {
+              return reject('User cancelled');
+            }
+
+            return resolve(res.authResponse);
+          },
+          {
+            scope: [
+              'public_profile',
+              'user_about_me',
+              'email',
+              'user_photos',
+              'user_posts'
+            ].join(',')
+          }
+        );
+      });
     })
   };
 }

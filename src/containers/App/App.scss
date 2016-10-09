@@ -1,4 +1,12 @@
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../theme/variables.scss';
+
+:global(.modal-open) .app {
+  transform: scale(0.9);
+}
 .app {
+  transform: scale(1);
+  transition: transform .3s ease-out;
   .brand {
     position: absolute;
     $size: 40px;
@@ -18,5 +26,31 @@
   }
 }
 .appContent {
-  margin: 50px 0; // for fixed navbar
+  // margin: 50px 0; // for fixed navbar
+}
+
+.page-enter {
+  opacity: 0.01;
+  transform: scaleX(0.2) scaleY(0.2);
+}
+
+.page-enter.page-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+  transform: scaleX(1) scaleY(1);
+}
+
+.page-leave {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  transform: scaleX(1) scaleY(1);
+}
+
+.page-leave.page-leave-active {
+  opacity: 0.01;
+  transform: scaleX(0.2) scaleY(0.2);
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
 }
