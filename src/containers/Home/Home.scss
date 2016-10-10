@@ -91,3 +91,32 @@
 .caseStudy {
   margin: 40px 20px;
 }
+
+.luxusImagesContainer {
+  :global(.thumbnail) {
+    position: absolute;
+    transition: transform .3s ease-in;
+  }
+  &:hover {
+    .taaleriDesktop {
+      transform: translate(-92px, 89px);
+    }
+    .taaleriMobile {
+      transform: translate(236px, -1px);
+    }
+  }
+  .taaleriDesktop {
+    width: 300px;
+    top: 0;
+  }
+  .taaleriMobile {
+    width: 200px;
+    position: relative;
+  }
+}
+
+.skillLogo {
+  width: 50px;
+  max-height: 60px;
+}
+

@@ -1,0 +1,19 @@
+.jadeSvg {
+	.red, .green {
+		transition: fill .1s ease-in;
+	}
+	.red {
+		fill: #b7b7b7;
+	}
+	.green {
+		fill: #989898;
+	}
+}
+.jadeSvg:hover {
+	.red {
+		fill: #C1272D;
+	}
+	.green {
+		fill: #569A83;
+	}
+}

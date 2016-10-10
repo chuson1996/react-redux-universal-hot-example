@@ -1,0 +1,30 @@
+.gruntSvg:hover {
+  .facecolor {
+    fill: #FBA919;
+  }
+
+  .shadowcolor {
+    fill: #E78724;
+  }
+
+  .linecolor {
+    fill: #463014;
+  }
+}
+.facecolor,
+.shadowcolor,
+.linecolor {
+  transition: fill .1s ease-in;
+}
+
+.facecolor {
+  fill: #bfb8aa;
+}
+
+.shadowcolor {
+  fill: #888481;
+}
+
+.linecolor {
+  fill: #464646;
+}

@@ -8,7 +8,11 @@ import Button from 'react-bootstrap/lib/Button';
 import Modal from 'react-bootstrap/lib/Modal';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
-import { TypewriterText } from 'components';
+import { TypewriterText,
+  AngularSVG,
+  GruntSVG,
+  WebpackSVG,
+  JadeSVG } from 'components';
 
 export default class Home extends Component {
   constructor(props) {
@@ -92,6 +96,23 @@ export default class Home extends Component {
         <div className={styles.caseStudy}>
           <div className="container text-center">
             <h2>Case studies</h2>
+            <Row>
+              <Col xs={12} sm={6}>
+                <h3>LUXUS WORLDWIDE</h3>
+                <p>October 2015 - May 2016</p>
+                <p>I took part in building a webshop for Taaleri.com. My job was to implement the ui with the design given by the creative director of Luxus and integrate APIs provided by the client.</p>
+                <div>
+                  <AngularSVG className={`${styles.skillLogo} hvr-float`}/>
+                  <GruntSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
+                  <WebpackSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
+                  <JadeSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} className={`${styles.luxusImagesContainer}`}>
+                <img src={require('./taaleri-mobile.png')} className={`${styles.taaleriMobile} thumbnail`} />
+                <img src={require('./taaleri-desktop.png')} className={`${styles.taaleriDesktop} thumbnail`}/>
+              </Col>
+            </Row>
           </div>
         </div>
       </div>

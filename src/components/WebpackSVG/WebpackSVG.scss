@@ -1,0 +1,34 @@
+.webpackSvg {
+	.blue1,
+	.blue2,
+	.blue3,
+	.sBlue {
+		transition: fill .1s ease-in, stop-color .1s ease-in;
+	}
+	.blue1 {
+		stop-color: #e2e2e2;
+	}
+	.blue2 {
+		stop-color: #f2f2f2;
+	}
+	.blue3 {
+		stop-color: #dbdbdb;
+	}
+	.sBlue {
+		fill: #868686;
+	}
+}
+.webpackSvg:hover {
+	.blue1 {
+		stop-color: #93B4E7;
+	}
+	.blue2 {
+		stop-color: #B9D1F8;
+	}
+	.blue3 {
+		stop-color: #9CB6E0;
+	}
+	.sBlue {
+		fill: #6F95DB;
+	}
+}
