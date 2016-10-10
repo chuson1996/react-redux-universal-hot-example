@@ -11,10 +11,13 @@ import Helmet from 'react-helmet';
 // import { InfoBar } from 'components';
 import { push } from 'react-router-redux';
 import config from '../../config';
-// import { asyncConnect } from 'redux-async-connect';
+import { asyncConnect } from 'redux-async-connect';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import last from 'lodash/last';
 
+@asyncConnect([{
+  promise: () => Promise.all([]) // Without this line, server-side rendering breaks!?
+}])
 @connect(
   state => ({user: state.auth.user}),
   {
