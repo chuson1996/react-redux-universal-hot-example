@@ -8,13 +8,14 @@ export default class JadeSVG extends Component {
 
   render() {
     const styles = require('./JadeSVG.scss');
-    const { className } = this.props;
+    const { className, ...rest } = this.props;
 
     return (
       <svg
+        {...rest}
         width="256px"
         height="388px"
-        viewBox="0 0 256 388"
+        viewBox="-35 0 256 388"
         preserveAspectRatio="xMinYMin meet"
         className={classNames(styles.jadeSvg, className)}>
         <g>

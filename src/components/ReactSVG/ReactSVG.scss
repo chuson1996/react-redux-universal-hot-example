@@ -1,0 +1,20 @@
+.reactSvg {
+	.blueFill,
+	.blueStroke {
+		transition: fill .1s ease-in, stroke .1s ease-in;
+	}
+	.blueFill {
+		fill: #b9b9b9;
+	}
+	.blueStroke {
+		stroke: #b9b9b9;
+	}
+	&:hover {
+		.blueFill {
+			fill: #00D8FF;
+		}
+		.blueStroke {
+			stroke: #00D8FF;
+		}
+	}
+}

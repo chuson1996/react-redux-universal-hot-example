@@ -8,11 +8,15 @@ import Button from 'react-bootstrap/lib/Button';
 import Modal from 'react-bootstrap/lib/Modal';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
+import Tooltip from 'react-bootstrap/lib/Tooltip';
+import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 import { TypewriterText,
   AngularSVG,
   GruntSVG,
   WebpackSVG,
-  JadeSVG } from 'components';
+  JadeSVG,
+  ReactSVG,
+  ReduxSVG } from 'components';
 
 export default class Home extends Component {
   constructor(props) {
@@ -70,26 +74,35 @@ export default class Home extends Component {
 
         <div className={styles.masthead}>
           <div className="container">
-            <h2>
-              <TypewriterText text="Chu Hoang Son" />
-            </h2>
-            <h4>
-              <TypewriterText text="Front-end Developer" />
-            </h4>
-            <Button
-              bsStyle="warning"
-              className="hvr-grow-rotate"
-              onClick={() => this.open()}>ABOUT ME</Button>
-            <br/><br/>
-            <Button bsStyle="info" className="hvr-sweep-to-top">
-              <i className="fa fa-facebook m-l-3"></i>
-            </Button>
-            <Button bsStyle="default" className="m-l-10 hvr-sweep-to-top">
-              <i className="fa fa-github m-l-3"></i>
-            </Button>
-            <Button bsStyle="primary" className="m-l-10 hvr-sweep-to-top">
-              <i className="fa fa-linkedin m-l-3"></i>
-            </Button>
+            <Row>
+              <Col xs={12} sm={6}>
+                <h2>
+                  <TypewriterText text="Chu Hoang Son" />
+                </h2>
+                <h4>
+                  <TypewriterText text="Front-end Developer" />
+                </h4>
+                <Button
+                  bsStyle="warning"
+                  className="hvr-grow-rotate"
+                  onClick={() => this.open()}>ABOUT ME</Button>
+                <br/><br/>
+                <Button bsStyle="info" className="hvr-sweep-to-top">
+                  <i className="fa fa-facebook m-l-3"></i>
+                </Button>
+                <Button bsStyle="default" className="m-l-10 hvr-sweep-to-top">
+                  <i className="fa fa-github m-l-3"></i>
+                </Button>
+                <Button bsStyle="primary" className="m-l-10 hvr-sweep-to-top">
+                  <i className="fa fa-linkedin m-l-3"></i>
+                </Button>
+              </Col>
+              <Col xs={12} sm={6} className="text-center">
+                <img
+                  className={styles.myFace}
+                  src={require('./face.jpg')}/>
+              </Col>
+            </Row>
           </div>
         </div>
 
@@ -97,20 +110,47 @@ export default class Home extends Component {
           <div className="container text-center">
             <h2>Case studies</h2>
             <Row>
-              <Col xs={12} sm={6}>
+              <Col xs={12} sm={12} md={6}>
                 <h3>LUXUS WORLDWIDE</h3>
                 <p>October 2015 - May 2016</p>
                 <p>I took part in building a webshop for Taaleri.com. My job was to implement the ui with the design given by the creative director of Luxus and integrate APIs provided by the client.</p>
                 <div>
-                  <AngularSVG className={`${styles.skillLogo} hvr-float`}/>
-                  <GruntSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
-                  <WebpackSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
-                  <JadeSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">AngularJS</Tooltip>}>
+                    <AngularSVG className={`${styles.skillLogo} hvr-float`}/>
+                  </OverlayTrigger>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">Grunt</Tooltip>}>
+                    <GruntSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
+                  </OverlayTrigger>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">Webpack</Tooltip>}>
+                    <WebpackSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
+                  </OverlayTrigger>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">Jade</Tooltip>}>
+                    <JadeSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
+                  </OverlayTrigger>
                 </div>
               </Col>
-              <Col xs={12} sm={6} className={`${styles.luxusImagesContainer}`}>
+              <Col xs={12} sm={12} md={6} className={`${styles.luxusImagesContainer}`}>
                 <img src={require('./taaleri-mobile.png')} className={`${styles.taaleriMobile} thumbnail`} />
                 <img src={require('./taaleri-desktop.png')} className={`${styles.taaleriDesktop} thumbnail`}/>
+              </Col>
+            </Row>
+            <Row className={`m-t-20`}>
+              <Col xs={12} sm={12} md={6} mdPush={6}>
+                <h3>Factory Finder</h3>
+                <p>July 2016 - August 2016</p>
+                <p>Factory Finder needed a way to shorten the customers' quoting process so I helped them develop their web platform to automate some of the tasks. My job was to implement UI layouts and integrate APIs to the application.</p>
+                <div>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">React</Tooltip>}>
+                    <ReactSVG className={`${styles.skillLogo} hvr-float`}/>
+                  </OverlayTrigger>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">Redux</Tooltip>}>
+                    <ReduxSVG className={`${styles.skillLogo} hvr-float m-l-10`}/>
+                  </OverlayTrigger>
+                </div>
+              </Col>
+              <Col xs={12} sm={12} md={6} mdPull={6} className={`${styles.factoryfinderImagesContainer}`}>
+                <img src={require('./factoryfinder-mobile.png')} className={`${styles.factoryfinderMobile} thumbnail`}/>
+                <img src={require('./factoryfinder-desktop.png')} className={`${styles.factoryfinderDesktop} thumbnail`}/>
               </Col>
             </Row>
           </div>

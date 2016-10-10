@@ -7,11 +7,12 @@ export default class GruntSVG extends Component {
   };
 
   render() {
-    const { className } = this.props;
+    const { className, ...rest } = this.props;
     const styles = require('./GruntSVG.scss');
 
     return (
       <svg
+        {...rest}
         className={classNames(styles.gruntSvg, className)}
         width={328}
         height={442}

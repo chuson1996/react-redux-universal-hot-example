@@ -1,0 +1,11 @@
+.reduxSvg {
+	.fill {
+		fill: #a5a5a5;
+		transition: fill .1s ease-in;
+	}
+	&:hover {
+		.fill {
+			fill: #764ABC;
+		}
+	}
+}

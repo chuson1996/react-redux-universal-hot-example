@@ -6,13 +6,14 @@ export default class AngularSVG extends Component {
   };
 
   render() {
-    const { className } = this.props;
+    const { className, ...rest } = this.props;
     const styles = require('./AngularSVG.scss');
     const ratio = 165.908 / 175.75; // width/height
     const width = 165.908;
     const height = width / ratio;
 
     return (<svg
+        {...rest}
         width={width}
         height={height}
         viewBox={`0 0 ${width} ${height}`}

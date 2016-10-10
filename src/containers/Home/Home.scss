@@ -6,16 +6,19 @@
     margin-bottom: 15px;
   }
 }
+.myFace {
+  width: 17em;
+  height: 17em;
+}
 .masthead {
   background: $navbar-inverse-bg;
-  background-image: url('./face.jpg');
   padding: 40px 20px 90px 20px;
   color: white;
   text-align: left;
-  background-size: 17em;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-origin: content-box;
+  .myFace {
+    margin-top: 20px;
+    max-width: 100%;
+  }
   .logo {
     $size: 200px;
     margin: auto;
@@ -90,28 +93,81 @@
 
 .caseStudy {
   margin: 40px 20px;
-}
-
-.luxusImagesContainer {
+  /* All devices */
   :global(.thumbnail) {
-    position: absolute;
     transition: transform .3s ease-in;
   }
-  &:hover {
+
+  /* Extra Small Devices, Phones, Small Devices, Tablets */
+  :global(.thumbnail) {
+    display: inline-block;
+    margin-top: 32px;
+  }
+  .luxusImagesContainer {
     .taaleriDesktop {
-      transform: translate(-92px, 89px);
+      width: 40%;
+      margin-left: 30px;
     }
     .taaleriMobile {
-      transform: translate(236px, -1px);
+      width: 30%;
+      vertical-align: top;
     }
   }
-  .taaleriDesktop {
-    width: 300px;
-    top: 0;
+  .factoryfinderImagesContainer {
+    .factoryfinderDesktop {
+      width: 40%;
+      margin-left: 30px;
+    }
+    .factoryfinderMobile {
+      width: 30%;
+      vertical-align: top;
+    }
   }
-  .taaleriMobile {
-    width: 200px;
-    position: relative;
+
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : $screen-md) {
+    :global(.thumbnail) {
+      position: absolute;
+      display: block;
+      margin-top: 0;
+    }
+    .luxusImagesContainer {
+      &:hover {
+        .taaleriDesktop {
+          transform: translate(-92px, 89px);
+        }
+        .taaleriMobile {
+          transform: translate(236px, -1px);
+        }
+      }
+      .taaleriDesktop {
+        width: 300px;
+        top: 0;
+      }
+      .taaleriMobile {
+        width: 200px;
+        position: relative;
+      }
+    }
+    .factoryfinderImagesContainer {
+      &:hover {
+        .factoryfinderDesktop {
+          transform: translate(127px, 33px);
+        }
+        .factoryfinderMobile {
+          transform: translate(-85px, -12px);
+        }
+      }
+      .factoryfinderDesktop {
+        width: 300px;
+        top: 0;
+      }
+      .factoryfinderMobile {
+        width: 200px;
+        position: relative;
+      }
+    }
   }
 }
 
@@ -119,4 +175,5 @@
   width: 50px;
   max-height: 60px;
 }
+
 

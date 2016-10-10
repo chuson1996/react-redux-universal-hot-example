@@ -8,10 +8,11 @@ export default class WebpackSVG extends Component {
 
   render() {
     const styles = require('./WebpackSVG.scss');
-    const { className } = this.props;
+    const { className, ...rest } = this.props;
 
     return (
       <svg
+        {...rest}
         className={classNames(styles.webpackSvg, className)}
         width="256px"
         height="296px"
