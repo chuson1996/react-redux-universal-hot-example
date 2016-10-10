@@ -19,10 +19,6 @@ module.exports = Object.assign({
     description: 'All social media in one place.',
     head: {
       titleTemplate: 'My Social Media: %s',
-      script: [{
-        src: '/fb-sdk.js',
-        type: 'text/javascript'
-      }],
       meta: [
         {name: 'description', content: 'All the modern best practices in one example.'},
         {charset: 'utf-8'},
