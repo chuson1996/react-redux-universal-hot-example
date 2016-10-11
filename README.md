@@ -9,3 +9,5 @@ Webpack SVG: http://freevector.co/logos-vector/webpack-logo-vector.html@
 Jade SVG: https://worldvectorlogo.com/logo/jade-3  
 React SVG: http://formatjs.io/img/react.svg  
 Redux SVG: https://github.com/reactjs/redux/tree/master/logo  
+Node SVG: http://seeklogo.com/nodejs-logo-273749.html  
+https://github.com/adobe-webplatform/balance-text  

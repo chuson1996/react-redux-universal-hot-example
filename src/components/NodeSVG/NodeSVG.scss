@@ -1,0 +1,11 @@
+.nodeSvg {
+	.nodeColor {
+		fill: #a5a5a5;
+		transition: fill .1s ease-in;
+	}
+	&:hover {
+		.nodeColor {
+			fill: #539E43;
+		}
+	}
+}

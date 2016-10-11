@@ -1,0 +1,24 @@
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
+@import '../../theme/variables.scss';
+
+$text-color: #f4f4f4;
+
+.awards {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: $navbar-inverse-bg;
+	color: $text-color;
+	h2, h3, h4, h5, h6 {
+		color: $text-color;
+	}
+}
+.futurehack, .spaceapp {
+	@include box-shadow(0 0 13px 1px rgba(255, 255, 255, 0.99));
+}
+.futurehack {
+	max-width: 250px;
+}
+.spaceapp {
+	max-width: 300px;
+}
