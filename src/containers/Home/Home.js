@@ -59,13 +59,13 @@ export default class Home extends Component {
                   Son is a front-end developer enthusiast with more than 3 years of experience in the industry.
                 </p>
                 <p>
-                  We all know that Javascript is drastically evolving every single day so Son keeps up-to-date to the latest things.
+                  We all know that Javascript is drastically evolving every single day so Son keeps up-to-date to the latest trends.
                 </p>
                 <p>
-                  Son have good depth understanding in DOM and browsers, system integration with API interaction and data visualisation.
+                  Son has good depth of understanding in DOM and browsers, system integration with API interaction and data visualisation.
                 </p>
                 <p>
-                  Being an introvert, Son is pretty friendly and outgoing. Son love sports and music, including karaoke singing. Son's ideal weekend is to drink beer and sing karaoke with friends and co-workers.
+                  Being an introvert, Son is pretty friendly and outgoing. Son loves basketball and music, including karaoke singing. Drinking beer and singing karaoke with friends and co-workers is Son's most ideal weekend.
                 </p>
               </Col>
             </Row>

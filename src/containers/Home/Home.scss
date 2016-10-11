@@ -1,6 +1,6 @@
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
 @import '../../theme/variables.scss';
-
+@import './_caseStudy.scss';
 .home {
   dd {
     margin-bottom: 15px;
@@ -88,86 +88,6 @@
   }
   .subheadline {
 
-  }
-}
-
-.caseStudy {
-  margin: 40px 20px;
-  /* All devices */
-  :global(.thumbnail) {
-    transition: transform .3s ease-in;
-  }
-
-  /* Extra Small Devices, Phones, Small Devices, Tablets */
-  :global(.thumbnail) {
-    display: inline-block;
-    margin-top: 32px;
-  }
-  .luxusImagesContainer {
-    .taaleriDesktop {
-      width: 40%;
-      margin-left: 30px;
-    }
-    .taaleriMobile {
-      width: 30%;
-      vertical-align: top;
-    }
-  }
-  .factoryfinderImagesContainer {
-    .factoryfinderDesktop {
-      width: 40%;
-      margin-left: 30px;
-    }
-    .factoryfinderMobile {
-      width: 30%;
-      vertical-align: top;
-    }
-  }
-
-
-  /* Medium Devices, Desktops */
-  @media only screen and (min-width : $screen-md) {
-    :global(.thumbnail) {
-      position: absolute;
-      display: block;
-      margin-top: 0;
-    }
-    .luxusImagesContainer {
-      &:hover {
-        .taaleriDesktop {
-          transform: translate(-92px, 89px);
-        }
-        .taaleriMobile {
-          transform: translate(236px, -1px);
-        }
-      }
-      .taaleriDesktop {
-        width: 300px;
-        top: 0;
-      }
-      .taaleriMobile {
-        width: 200px;
-        position: relative;
-      }
-    }
-    .factoryfinderImagesContainer {
-      &:hover {
-        .factoryfinderDesktop {
-          transform: translate(127px, 33px);
-        }
-        .factoryfinderMobile {
-          transform: translate(-85px, -12px);
-        }
-      }
-      .factoryfinderDesktop {
-        width: 300px;
-        top: 0;
-      }
-      .factoryfinderMobile {
-        width: 200px;
-        position: relative;
-      }
-    }
   }
 }
 
