@@ -135,10 +135,10 @@ export default class Home extends Component {
                   <br/>Minna Heiskanen - Administrative Manager at Luxus</i>
                 </p>
               </Col>
-              <Col xs={12} sm={12} md={6} className={`${styles.luxusImagesContainer}`}>
+              {/* <Col xs={12} sm={12} md={6} className={`${styles.luxusImagesContainer}`}>
                 <img src={require('./taaleri-mobile.png')} className={`${styles.taaleriMobile} thumbnail`} />
                 <img src={require('./taaleri-desktop.png')} className={`${styles.taaleriDesktop} thumbnail`}/>
-              </Col>
+              </Col> */}
             </Row>
             <Row className={`m-t-20`}>
               <Col xs={12} sm={12} md={6} mdPush={6}>
@@ -174,14 +174,14 @@ export default class Home extends Component {
                   <p>Our project was to create website where there is a water map, which shows which part of world water (river, lake) is usable.</p>
                 </Col></Row>
                 <div className="m-b-20">
-                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">NodeJS</Tooltip>}>
-                    <NodeSVG className={`${styles.skillLogo} hvr-float`}/>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">AngularJS</Tooltip>}>
+                    <AngularSVG className={`${styles.skillLogo} hvr-float`}/>
                   </OverlayTrigger>
                 </div>
               </Col>
               <Col xs={12} sm={12} md={6}>
                 <Image
-                  className={styles.spaceapp}
+                  className={`${styles.spaceapp} hvr-grow-rotate`}
                   responsive
                   thumbnail
                   src={require('./spaceapp.jpg')}
@@ -197,14 +197,14 @@ export default class Home extends Component {
                   <p>Competition Product: Health Assistance Bot - An AI to befriend with a Telegram user to provide health tips and support</p>
                 </Col></Row>
                 <div className="m-b-20">
-                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">React</Tooltip>}>
-                    <ReactSVG className={`${styles.skillLogo} hvr-float`}/>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">NodeJS</Tooltip>}>
+                    <NodeSVG className={`${styles.skillLogo} hvr-float`}/>
                   </OverlayTrigger>
                 </div>
               </Col>
               <Col xs={12} sm={12} md={6} mdPull={6} className="m-t-10">
                 <Image
-                  className={styles.futurehack}
+                  className={`${styles.futurehack} hvr-grow-rotate`}
                   responsive
                   thumbnail
                   src={require('./futurehack.jpg')}
