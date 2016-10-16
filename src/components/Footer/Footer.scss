@@ -1,0 +1,23 @@
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../theme/variables.scss';
+
+$text-color: #f4f4f4;
+.footer {
+	background: $navbar-inverse-bg;
+	color: $text-color;
+	.footerLinks {
+		margin-left: auto;
+		margin-right: auto;
+		/* Small Devices, Tablets */
+		@media only screen and (min-width : $screen-sm) {
+			width: 40%;
+		}
+
+		.link > a{
+			border-bottom: 0;
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+}

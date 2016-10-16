@@ -41,7 +41,7 @@ hr.hr-yellow {
     margin-right: auto;
 }
 
-@for $i from 1 through 30 {
+@for $i from 0 through 30 {
 	.m-l-#{$i} {
 		margin-left: 0px + $i;
 	}

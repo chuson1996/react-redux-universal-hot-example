@@ -14,6 +14,7 @@ import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import last from 'lodash/last';
+import { Footer } from 'components';
 
 @asyncConnect([{
   promise: () => Promise.all([]) // Without this line, server-side rendering breaks!?
@@ -75,12 +76,7 @@ export default class App extends Component {
         </div>
         {/* <InfoBar/> */}
 
-        {/* <div className="well text-center">
-          Have questions? Ask for help <a
-          href="https://github.com/erikras/react-redux-universal-hot-example/issues"
-          target="_blank">on Github</a> or in the <a
-          href="https://discord.gg/0ZcbPKXt5bZZb1Ko" target="_blank">#react-redux-universal</a> Discord channel.
-        </div> */}
+        <Footer/>
       </div>
     );
   }

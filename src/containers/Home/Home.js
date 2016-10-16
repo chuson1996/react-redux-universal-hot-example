@@ -110,13 +110,14 @@ export default class Home extends Component {
 
         <div className={styles.caseStudy}>
           <div className="container text-center">
-            <h2>Case studies</h2>
+            <h2>Latest work</h2>
             <Row>
-              <Col xs={12} sm={12} md={6}>
+              <Col xs={12} sm={12} md={6} mdOffset={3}>
                 <h3>LUXUS WORLDWIDE</h3>
                 <p>October 2015 - May 2016</p>
-                <p>I took part in building a webshop for Taaleri.com. My job was to implement the ui with the design given by the creative director of Luxus and integrate APIs provided by the client.</p>
-                <div>
+                <p><i>"Son is a responsible and fast developing front-end developer. He has shown he works best in a team, but can and will take responsibility also when working alone. His technical skills and level of experience exceeded the requirements for the intern position he was in, and could easily work as a full-time developer, especially in front-end projects."
+                  <br/>Minna Heiskanen - Administrative Manager at Luxus</i></p>
+                <div className="m-b-20">
                   <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">AngularJS</Tooltip>}>
                     <AngularSVG className={`${styles.skillLogo} hvr-float`}/>
                   </OverlayTrigger>
@@ -130,10 +131,6 @@ export default class Home extends Component {
                     <JadeSVG className={`${styles.skillLogo} m-l-10 hvr-float`}/>
                   </OverlayTrigger>
                 </div>
-                <p className="m-t-30">
-                  <i>"Son is a responsible and fast developing front-end developer. He has shown he works best in a team, but can and will take responsibility also when working alone. His technical skills and level of experience exceeded the requirements for the intern position he was in, and could easily work as a full-time developer, especially in front-end projects."
-                  <br/>Minna Heiskanen - Administrative Manager at Luxus</i>
-                </p>
               </Col>
               {/* <Col xs={12} sm={12} md={6} className={`${styles.luxusImagesContainer}`}>
                 <img src={require('./taaleri-mobile.png')} className={`${styles.taaleriMobile} thumbnail`} />
@@ -209,6 +206,69 @@ export default class Home extends Component {
                   thumbnail
                   src={require('./futurehack.jpg')}
                   alt="futurehack" />
+              </Col>
+            </Row>
+          </div>
+        </div>
+
+        <div className={styles.sideProjects}>
+          <div className="container text-center">
+            <h2>SIDE PROJECTS</h2>
+            <Row>
+              <Col xs={12} sm={12} md={6} mdOffset={3}>
+                <h3>Web Portfolio</h3>
+                <p>Well... This is my web portfolio. :)</p>
+                <p>
+                  <i className="fa fa-globe"></i> <a href="https://chuson.com">https://chuson.com</a>
+                  <br/>
+                  <i className="fa fa-github"></i> <a href="https://github.com/chuson1996/web-portfolio">https://github.com/chuson1996/web-portfolio</a>
+                </p>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={12} md={6} mdPush={6}>
+                <h3>SpeedVocab (ReactJS)</h3>
+                <p>I rebuilt SpeedVocab to learn ReactJS. But this time, instead of re-inventing the wheel, I integrateed Quizlet into my application and added what it didn't have: Word usage and unlimited images. I also practiced the behavior of good UX.</p>
+                <p>
+                  <i className="fa fa-globe"></i> <a href="http://chuson1996.herokuapp.com/">http://chuson1996.herokuapp.com/</a>
+                  <br/>
+                  <i className="fa fa-github"></i> <a href="github.com/chuson1996/SpeedVocab-React">https://github.com/chuson1996/SpeedVocab-React</a>
+                </p>
+                <div className="m-b-12">
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">ReactJS</Tooltip>}>
+                    <ReactSVG className={`${styles.skillLogo} hvr-float`}/>
+                  </OverlayTrigger>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">Webpack</Tooltip>}>
+                    <WebpackSVG className={`${styles.skillLogo} hvr-float m-l-10`}/>
+                  </OverlayTrigger>
+                </div>
+              </Col>
+              <Col xs={12} sm={12} md={6} mdPull={6} className={styles.speedVocabReactImagesContainer}>
+                <img src={require('./speedvocab-react-mobile.png')} className={`${styles.speedVocabReactMobile} thumbnail`}/>
+                <img src={require('./speedvocab-react-desktop.png')} className={`${styles.speedVocabReactDesktop} thumbnail`}/>
+              </Col>
+            </Row>
+            <Row className="m-t-20">
+              <Col xs={12} sm={12} md={6}>
+                <h3>SpeedVocab (Angular)</h3>
+                <p>I built this project to serve the purpose of passing my Finnish exam.</p>
+                <p>
+                  <i className="fa fa-globe"></i> <a href="http://chuson.herokuapp.com/">http://chuson.herokuapp.com</a>
+                  <br/>
+                  <i className="fa fa-github"></i> <a href="https://github.com/chuson1996/SpeedVocab">https://github.com/chuson1996/SpeedVocab</a>
+                </p>
+                <div className="m-b-12">
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">Angular</Tooltip>}>
+                    <AngularSVG className={`${styles.skillLogo} hvr-float`}/>
+                  </OverlayTrigger>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">Grunt</Tooltip>}>
+                    <GruntSVG className={`${styles.skillLogo} hvr-float m-l-10`}/>
+                  </OverlayTrigger>
+                </div>
+              </Col>
+              <Col xs={12} sm={12} md={6} className={styles.speedVocabAngularImagesContainer}>
+                <img src={require('./speedvocab-angular-desktop.png')} className={`${styles.speedVocabAngularDesktop} thumbnail`}/>
+                <img src={require('./speedvocab-angular-tablet.png')} className={`${styles.speedVocabAngularMobile} thumbnail`}/>
               </Col>
             </Row>
           </div>
