@@ -15,9 +15,26 @@
 }
 .masthead {
   background: $navbar-inverse-bg;
-  padding: 40px 20px 90px 20px;
+  background-image: url('./hero.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   text-align: left;
+  > div {
+    padding: 40px 20px 90px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.71);
+    height: 100vh;
+    position: relative;
+    > div {
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
   .myFace {
     margin-top: 20px;
     max-width: 100%;

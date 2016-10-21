@@ -75,9 +75,9 @@ export default class Home extends Component {
         </Modal>
 
         <div className={styles.masthead}>
-          <div className="container">
+          <div>
             <Row>
-              <Col xs={12} sm={6}>
+              <Col xs={12}>
                 <h2>
                   <TypewriterText text="Chu Hoang Son" />
                 </h2>
@@ -89,21 +89,27 @@ export default class Home extends Component {
                   className="hvr-grow-rotate"
                   onClick={() => this.open()}>ABOUT ME</Button>
                 <br/><br/>
-                <Button bsStyle="info" className="hvr-sweep-to-top">
-                  <i className="fa fa-facebook m-l-3"></i>
-                </Button>
-                <Button bsStyle="default" className="m-l-10 hvr-sweep-to-top">
-                  <i className="fa fa-github m-l-3"></i>
-                </Button>
-                <Button bsStyle="primary" className="m-l-10 hvr-sweep-to-top">
-                  <i className="fa fa-linkedin m-l-3"></i>
-                </Button>
+                <a href="https://www.facebook.com/holdmyhandifyoucan" style={{ borderBottom: 0 }}>
+                  <Button bsStyle="info" className="hvr-sweep-to-top">
+                    <i className="fa fa-facebook m-l-3"></i>
+                  </Button>
+                </a>
+                <a href="https://github.com/chuson1996/web-portfolio" style={{ borderBottom: 0 }}>
+                  <Button bsStyle="default" className="m-l-10 hvr-sweep-to-top">
+                    <i className="fa fa-github m-l-3"></i>
+                  </Button>
+                </a>
+                <a href="https://fi.linkedin.com/in/chu-hoang-son-b92499a5" style={{ borderBottom: 0 }}>
+                  <Button bsStyle="primary" className="m-l-10 hvr-sweep-to-top">
+                    <i className="fa fa-linkedin m-l-3"></i>
+                  </Button>
+                </a>
               </Col>
-              <Col xs={12} sm={6} className="text-center">
+              {/* <Col xs={12} sm={6} className="text-center">
                 <img
                   className={styles.myFace}
                   src={require('./face.jpg')}/>
-              </Col>
+              </Col> */}
             </Row>
           </div>
         </div>
@@ -223,6 +229,11 @@ export default class Home extends Component {
                   <br/>
                   <i className="fa fa-github"></i> <a href="https://github.com/chuson1996/web-portfolio">https://github.com/chuson1996/web-portfolio</a>
                 </p>
+                <div className="m-b-12">
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">ReactJS</Tooltip>}>
+                    <ReactSVG className={`${styles.skillLogo} hvr-float`}/>
+                  </OverlayTrigger>
+                </div>
               </Col>
             </Row>
             <Row>
