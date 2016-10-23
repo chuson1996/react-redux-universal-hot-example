@@ -12,8 +12,6 @@ const environment = {
 module.exports = Object.assign({
   host: process.env.HOST || 'localhost',
   port: process.env.PORT,
-  apiHost: process.env.APIHOST || 'localhost',
-  apiPort: process.env.APIPORT,
   app: {
     title: 'My Social Media',
     description: 'All social media in one place.',
