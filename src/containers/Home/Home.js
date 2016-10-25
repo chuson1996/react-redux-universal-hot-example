@@ -11,7 +11,6 @@ import Col from 'react-bootstrap/lib/Col';
 import Image from 'react-bootstrap/lib/Image';
 import Tooltip from 'react-bootstrap/lib/Tooltip';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-import config from 'config';
 import { TypewriterText,
   AngularSVG,
   GruntSVG,
@@ -39,7 +38,6 @@ export default class Home extends Component {
 
   render() {
     const styles = require('./Home.scss');
-    const portfolioUrl = `https://${config.host}`;
     return (
       <div className={styles.home}>
         <Helmet title="Home"/>
@@ -227,8 +225,6 @@ export default class Home extends Component {
                 <h3>Web Portfolio</h3>
                 <p>Well... This is my web portfolio. :)</p>
                 <p>
-                  <i className="fa fa-globe"></i> <a href={portfolioUrl}>{portfolioUrl}</a>
-                  <br/>
                   <i className="fa fa-github"></i> <a href="https://github.com/chuson1996/web-portfolio">https://github.com/chuson1996/web-portfolio</a>
                 </p>
                 <div className="m-b-12">
