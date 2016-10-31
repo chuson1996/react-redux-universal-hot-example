@@ -84,10 +84,10 @@ export default class Home extends Component {
                 <h4>
                   <TypewriterText text="Front-end Developer" />
                 </h4>
-                <Button
+                {/* <Button
                   bsStyle="warning"
                   className="hvr-grow-rotate"
-                  onClick={() => this.open()}>ABOUT ME</Button>
+                  onClick={() => this.open()}>ABOUT ME</Button> */}
                 <br/><br/>
                 <a href="https://www.facebook.com/holdmyhandifyoucan" style={{ borderBottom: 0 }}>
                   <Button bsStyle="info" className="hvr-sweep-to-top">
