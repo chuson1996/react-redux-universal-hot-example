@@ -138,3 +138,12 @@ a {
 .modal-body {
 	padding: 0;
 }
+
+*[data-scroll-watch] {
+	opacity: 0;
+	@include transition(opacity .3s ease-out);
+}
+
+*[data-scroll-watch].scroll-watch-in-view {
+	opacity: 1;
+}

@@ -11,6 +11,7 @@ import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { ReduxAsyncConnect } from 'redux-async-connect';
 import useScroll from 'scroll-behavior/lib/useStandardScroll';
+import ScrollWatch from 'scrollwatch';
 
 import getRoutes from './routes';
 
@@ -19,6 +20,15 @@ const _browserHistory = useScroll(() => browserHistory)();
 const dest = document.getElementById('content');
 const store = createStore(_browserHistory, client, window.__data);
 const history = syncHistoryWithStore(_browserHistory, store);
+
+const abc = new ScrollWatch({
+  onElementInView: (data) => {
+    data.el.classList.add('animated');
+    data.el.classList.add(data.el.dataset.animate);
+    console.log(data.el, '...is in view');
+  }
+});
+console.log(abc);
 
 const component = (
   <Router render={(props) =>

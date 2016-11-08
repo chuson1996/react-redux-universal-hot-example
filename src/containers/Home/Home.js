@@ -118,7 +118,9 @@ export default class Home extends Component {
           <div className="container text-center">
             <h2>Latest work</h2>
             <Row>
-              <Col xs={12} sm={12} md={6} mdOffset={3}>
+              <Col xs={12} sm={12} md={6} mdOffset={3}
+                data-scroll-watch
+                data-animate="fadeIn">
                 <h3>LUXUS WORLDWIDE</h3>
                 <p>October 2015 - May 2016</p>
                 <p><i>"Son is a responsible and fast developing front-end developer. He has shown he works best in a team, but can and will take responsibility also when working alone. His technical skills and level of experience exceeded the requirements for the intern position he was in, and could easily work as a full-time developer, especially in front-end projects."
@@ -144,7 +146,7 @@ export default class Home extends Component {
               </Col> */}
             </Row>
             <Row className={`m-t-20`}>
-              <Col xs={12} sm={12} md={6} mdPush={6}>
+              <Col xs={12} sm={12} md={6} mdPush={6} data-scroll-watch data-animate="fadeInLeft">
                 <h3>Factory Finder</h3>
                 <p>July 2016 - August 2016</p>
                 <p>Factory Finder needed a way to shorten the customers' quoting process so I helped them develop their web platform to automate some of the tasks. My job was to implement UI layouts and integrate APIs to the application.</p>
@@ -157,7 +159,11 @@ export default class Home extends Component {
                   </OverlayTrigger>
                 </div>
               </Col>
-              <Col xs={12} sm={12} md={6} mdPull={6} className={`${styles.factoryfinderImagesContainer}`}>
+              <Col
+                xs={12} sm={12} md={6} mdPull={6}
+                className={`${styles.factoryfinderImagesContainer}`}
+                data-scroll-watch
+                data-animate="fadeInRight">
                 <img src={require('./factoryfinder-mobile.png')} className={`${styles.factoryfinderMobile} thumbnail`}/>
                 <img src={require('./factoryfinder-desktop.png')} className={`${styles.factoryfinderDesktop} thumbnail`}/>
               </Col>
@@ -167,9 +173,13 @@ export default class Home extends Component {
 
         <div className={styles.awards}>
           <div className="container text-center">
-            <h2>Awards</h2>
+            <h2
+              data-scroll-watch
+              data-animate="tada">Awards</h2>
             <Row>
-              <Col xs={12} sm={12} md={6}>
+              <Col xs={12} sm={12} md={6}
+                data-scroll-watch
+                data-animate="fadeInRight">
                 <h3><a className="underline" href="https://2015.spaceappschallenge.org/project/water-mapping/">SPACE APPS MIKKELI</a></h3>
                 <p>April 2015</p>
                 <p>2nd place and People's choice award</p>
@@ -182,7 +192,9 @@ export default class Home extends Component {
                   </OverlayTrigger>
                 </div>
               </Col>
-              <Col xs={12} sm={12} md={6}>
+              <Col xs={12} sm={12} md={6}
+                data-scroll-watch
+                data-animate="fadeInLeft">
                 <Image
                   className={`${styles.spaceapp} hvr-grow-rotate`}
                   responsive
@@ -192,7 +204,9 @@ export default class Home extends Component {
               </Col>
             </Row>
             <Row className="m-t-20">
-              <Col xs={12} sm={12} md={6} mdPush={6}>
+              <Col xs={12} sm={12} md={6} mdPush={6}
+                data-scroll-watch
+                data-animate="fadeInRight">
                 <h3><a className="underline" href="http://futurehack.fi/">Future Hack</a></h3>
                 <p>April 2016</p>
                 <p>2nd place</p>
@@ -205,7 +219,9 @@ export default class Home extends Component {
                   </OverlayTrigger>
                 </div>
               </Col>
-              <Col xs={12} sm={12} md={6} mdPull={6} className="m-t-10">
+              <Col xs={12} sm={12} md={6} mdPull={6} className="m-t-10"
+                data-scroll-watch
+                data-animate="fadeInLeft">
                 <Image
                   className={`${styles.futurehack} hvr-grow-rotate`}
                   responsive
@@ -219,9 +235,40 @@ export default class Home extends Component {
 
         <div className={styles.sideProjects}>
           <div className="container text-center">
-            <h2>SIDE PROJECTS</h2>
+            <h2
+              data-scroll-watch
+              data-animate="pulse">SIDE PROJECTS</h2>
             <Row>
-              <Col xs={12} sm={12} md={6} mdOffset={3}>
+              <Col xs={12} sm={12} md={6}
+                data-scroll-watch
+                data-animate="fadeInRight">
+                <h3>Front-end Bookmark</h3>
+                <p>To alleviate the hurdle of not knowing where to learn about front end development, Front-end Bookmark will provider developers with hundreds of resources to be inspired and further enrich their own knowledge.</p>
+                <p>
+                  <i className="fa fa-globe"></i> <a href="https://frontend-bookmark.herokuapp.com">https://frontend-bookmark.herokuapp.com</a>
+                  <br/>
+                  <i className="fa fa-github"></i> <a href="https://github.com/chuson1996/frontend-advisor">https://github.com/chuson1996/frontend-advisor</a>
+                </p>
+                <div className="m-b-12">
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">ReactJS</Tooltip>}>
+                    <ReactSVG className={`${styles.skillLogo} hvr-float`}/>
+                  </OverlayTrigger>
+                  <OverlayTrigger placement="bottom" overlay={<Tooltip id="tooltip">Redux</Tooltip>}>
+                    <ReduxSVG className={`${styles.skillLogo} hvr-float m-l-10`}/>
+                  </OverlayTrigger>
+                </div>
+              </Col>
+              <Col xs={12} sm={12} md={6} className={`${styles.speedVocabAngularImagesContainer} m-b-20`}
+                data-scroll-watch
+                data-animate="fadeInLeft">
+                <img src={require('./frontendbookmark-desktop.png')} className={`${styles.speedVocabAngularDesktop} thumbnail`}/>
+                <img src={require('./frontendbookmark-mobile.png')} className={`${styles.speedVocabAngularMobile} thumbnail`}/>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} sm={12} md={6} mdOffset={3}
+                data-scroll-watch
+                data-animate="bounceIn">
                 <h3>Web Portfolio</h3>
                 <p>Well... This is my web portfolio. :)</p>
                 <p>
@@ -235,11 +282,13 @@ export default class Home extends Component {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} sm={12} md={6} mdPush={6}>
+              <Col xs={12} sm={12} md={6} mdPush={6}
+                data-scroll-watch
+                data-animate="bounceInLeft">
                 <h3>SpeedVocab (ReactJS)</h3>
                 <p>I rebuilt SpeedVocab to learn ReactJS. But this time, instead of re-inventing the wheel, I integrateed Quizlet into my application and added what it didn't have: Word usage and unlimited images. I also practiced the behavior of good UX.</p>
                 <p>
-                  <i className="fa fa-globe"></i> <a href="http://chuson1996.herokuapp.com/">http://chuson1996.herokuapp.com/</a>
+                  <i className="fa fa-globe"></i> <a href="http://chuson1996.herokuapp.com">http://chuson1996.herokuapp.com</a>
                   <br/>
                   <i className="fa fa-github"></i> <a href="github.com/chuson1996/SpeedVocab-React">https://github.com/chuson1996/SpeedVocab-React</a>
                 </p>
@@ -252,13 +301,17 @@ export default class Home extends Component {
                   </OverlayTrigger>
                 </div>
               </Col>
-              <Col xs={12} sm={12} md={6} mdPull={6} className={styles.speedVocabReactImagesContainer}>
+              <Col xs={12} sm={12} md={6} mdPull={6} className={`${styles.speedVocabReactImagesContainer}`}
+                data-scroll-watch
+                data-animate="bounceInRight">
                 <img src={require('./speedvocab-react-mobile.png')} className={`${styles.speedVocabReactMobile} thumbnail`}/>
                 <img src={require('./speedvocab-react-desktop.png')} className={`${styles.speedVocabReactDesktop} thumbnail`}/>
               </Col>
             </Row>
             <Row className="m-t-20">
-              <Col xs={12} sm={12} md={6}>
+              <Col xs={12} sm={12} md={6}
+                data-scroll-watch
+                data-animate="fadeInRight">
                 <h3>SpeedVocab (Angular)</h3>
                 <p>I built this project to serve the purpose of passing my Finnish exam.</p>
                 <p>
@@ -275,7 +328,9 @@ export default class Home extends Component {
                   </OverlayTrigger>
                 </div>
               </Col>
-              <Col xs={12} sm={12} md={6} className={styles.speedVocabAngularImagesContainer}>
+              <Col xs={12} sm={12} md={6} className={styles.speedVocabAngularImagesContainer}
+                data-scroll-watch
+                data-animate="fadeInLeft">
                 <img src={require('./speedvocab-angular-desktop.png')} className={`${styles.speedVocabAngularDesktop} thumbnail`}/>
                 <img src={require('./speedvocab-angular-tablet.png')} className={`${styles.speedVocabAngularMobile} thumbnail`}/>
               </Col>
