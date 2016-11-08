@@ -1,0 +1,103 @@
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
+@import '../../theme/variables.scss';
+
+.skillLogo {
+  & + .skillLogo {
+    margin-left: 10px;
+  }
+  width: 50px;
+  max-height: 60px;
+}
+.projectSection {
+  /* All devices */
+  .imageDesktop,
+  .imageMobile {
+    transition: transform .3s ease-in;
+    @include box-shadow(0 0 20px 0px rgba(0, 0, 0, 0.51));
+  }
+
+  /* Extra Small Devices, Phones, Small Devices, Tablets */
+  .imageDesktop,
+  .imageMobile {
+    display: inline-block;
+    margin-top: 32px;
+  }
+  .imagesContainer {
+    .imageDesktop {
+      width: 40%;
+      margin-left: 30px;
+    }
+    .imageMobile {
+      width: 30%;
+      vertical-align: top;
+    }
+  }
+  .imagesContainer.reverseOrder {
+    .imageDesktop {
+      margin-left: 30px;
+      width: 40%;
+    }
+    .imageMobile {
+      width: 30%;
+      vertical-align: top;
+    }
+  }
+
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : $screen-md) {
+    .imageDesktop,
+    .imageMobile {
+      position: absolute;
+      display: block;
+      margin-top: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .imagesContainer {
+      &:hover {
+        .imageDesktop {
+          transform: translate(-127px, 33px);
+        }
+        .imageMobile {
+          transform: translate(85px, -12px);
+        }
+      }
+      .imageDesktop {
+        width: 300px;
+        left: ceil(($grid-gutter-width / 2));
+        margin-left: auto;
+        top: 0;
+      }
+      .imageMobile {
+        width: 200px;
+        position: relative;
+      }
+    }
+    .imagesContainer.reverseOrder {
+      &:hover {
+        .imageDesktop {
+          transform: translate(127px, 33px);
+        }
+        .imageMobile {
+          transform: translate(-85px, -12px);
+        }
+      }
+      .imageDesktop {
+        width: 300px;
+        left: ceil(($grid-gutter-width / 2));
+        margin-left: auto;
+        top: 0;
+      }
+      .imageMobile {
+        width: 200px;
+        position: relative;
+      }
+    }
+  }
+}
+.projectSection + .projectSection {
+  margin-top: 20px;
+}

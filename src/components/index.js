@@ -14,3 +14,4 @@ export ReactSVG from './ReactSVG/ReactSVG';
 export ReduxSVG from './ReduxSVG/ReduxSVG';
 export NodeSVG from './NodeSVG/NodeSVG';
 export Footer from './Footer/Footer';
+export ProjectSection from './ProjectSection/ProjectSection';
