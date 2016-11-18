@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 // import { CounterButton, GithubButton } from 'components';
 // import config from '../../config';
 import Helmet from 'react-helmet';
-import className from 'classnames';
+// import className from 'classnames';
 import Button from 'react-bootstrap/lib/Button';
-import Modal from 'react-bootstrap/lib/Modal';
+// import Modal from 'react-bootstrap/lib/Modal';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
-// import Image from 'react-bootstrap/lib/Image';
+import Image from 'react-bootstrap/lib/Image';
 // import Tooltip from 'react-bootstrap/lib/Tooltip';
 // import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 import { TypewriterText,
@@ -43,42 +43,11 @@ export default class Home extends Component {
       <div className={styles.home}>
         <Helmet title="Home"/>
 
-        <Modal
-          className={styles.aboutMe}
-          show={this.state.showModal}
-          onHide={() => this.close()}>
-          <Modal.Body>
-            <Row>
-              <Col xs={12} sm={6} className={styles.left}>
-                <h3 className={className(styles.headline, 'text-center')}>
-                  <TypewriterText text="About Me."/>
-                </h3>
-                <p className={className(styles.subheadline, 'text-center')}>
-                  <TypewriterText text="Junior Front-end Developer."/>
-                </p>
-              </Col>
-              <Col xs={12} sm={6} className={styles.right}>
-                <p className={styles.text}>
-                  Son is a front-end developer enthusiast with more than 3 years of experience in the industry.
-                </p>
-                <p>
-                  We all know that Javascript is drastically evolving every single day so Son keeps up-to-date to the latest trends.
-                </p>
-                <p>
-                  Son has good depth of understanding in DOM and browsers, system integration with API interaction and data visualisation.
-                </p>
-                <p>
-                  Being an introvert, Son is pretty friendly and outgoing. Son loves basketball and music, including karaoke singing. Drinking beer and singing karaoke with friends and co-workers is Son's most ideal weekend.
-                </p>
-              </Col>
-            </Row>
-          </Modal.Body>
-        </Modal>
-
         <div className={styles.masthead}>
           <div>
             <Row>
               <Col xs={12}>
+                <Image className={styles.myFace} src={require('./myFace.jpg')} thumbnail responsive />
                 <h2>
                   <TypewriterText text="Chu Hoang Son" />
                 </h2>
@@ -90,17 +59,17 @@ export default class Home extends Component {
                   className="hvr-grow-rotate"
                   onClick={() => this.open()}>ABOUT ME</Button> */}
                 <br/><br/>
-                <a href="https://www.facebook.com/holdmyhandifyoucan" style={{ borderBottom: 0 }}>
+                <a target="_blank" href="https://www.facebook.com/holdmyhandifyoucan" style={{ borderBottom: 0 }}>
                   <Button bsStyle="info" className="hvr-sweep-to-top">
                     <i className="fa fa-facebook m-l-3"></i>
                   </Button>
                 </a>
-                <a href="https://github.com/chuson1996/web-portfolio" style={{ borderBottom: 0 }}>
+                <a target="_blank" href="https://github.com/chuson1996/web-portfolio" style={{ borderBottom: 0 }}>
                   <Button bsStyle="default" className="m-l-10 hvr-sweep-to-top">
                     <i className="fa fa-github m-l-3"></i>
                   </Button>
                 </a>
-                <a href="https://fi.linkedin.com/in/chu-hoang-son-b92499a5" style={{ borderBottom: 0 }}>
+                <a target="_blank" href="https://fi.linkedin.com/in/chu-hoang-son-b92499a5" style={{ borderBottom: 0 }}>
                   <Button bsStyle="primary" className="m-l-10 hvr-sweep-to-top">
                     <i className="fa fa-linkedin m-l-3"></i>
                   </Button>
@@ -191,20 +160,20 @@ export default class Home extends Component {
 
             <ProjectSection
               animation={{ leftCol: 'fadeInRight', rightCol: 'fadeInLeft'}}
-              title="Front-end Bookmark"
+              title="FRODEV"
               date="November 2016"
               description="To alleviate the hurdle of not knowing where or what to learn about front end development, Front-end Bookmark will provide developers with hundreds of resources for inspiration and further enriching their own knowledge."
               links={{
-                website: 'https://frontend-bookmark.herokuapp.com',
+                website: 'https://frodev.herokuapp.com',
                 github: 'https://github.com/chuson1996/frontend-advisor'
               }}
-              skills={['ReactJS', 'Redux']}
+              skills={['ReactJS', 'Redux', 'Sketch']}
               images={[{
-                src: require('./frontendbookmark-desktop.png'),
-                platform: 'desktop'
-              }, {
                 src: require('./frontendbookmark-mobile.png'),
                 platform: 'mobile'
+              }, {
+                src: require('./frontendbookmark-desktop.png'),
+                platform: 'desktop'
               }]} />
 
             <ProjectSection
@@ -224,7 +193,7 @@ export default class Home extends Component {
               date="June 2016 - July 2016"
               description="I rebuilt SpeedVocab to learn ReactJS. But this time, instead of re-inventing the wheel, I integrateed Quizlet into my application and added what it didn't have: Word usage and unlimited images. I also practiced the behavior of good UX."
               links={{
-                website: 'http://chuson1996.herokuapp.com',
+                website: 'http://speedvocab2.herokuapp.com',
                 github: 'github.com/chuson1996/SpeedVocab-React'
               }}
               skills={['ReactJS', 'Webpack', 'Redux']}
@@ -236,7 +205,7 @@ export default class Home extends Component {
                 platform: 'desktop'
               }]} />
 
-            <ProjectSection
+            {/* <ProjectSection
               animation={{ leftCol: 'fadeInRight', rightCol: 'fadeInLeft'}}
               title="SpeedVocab (Angular)"
               date=""
@@ -247,12 +216,12 @@ export default class Home extends Component {
               }}
               skills={['AngularJS', 'Grunt']}
               images={[{
-                src: require('./speedvocab-angular-desktop.png'),
-                platform: 'desktop'
-              }, {
                 src: require('./speedvocab-angular-tablet.png'),
                 platform: 'mobile'
-              }]} />
+              }, {
+                src: require('./speedvocab-angular-desktop.png'),
+                platform: 'desktop'
+              }]} /> */}
           </div>
         </div>
       </div>

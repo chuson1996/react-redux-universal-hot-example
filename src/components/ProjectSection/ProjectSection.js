@@ -12,7 +12,8 @@ import {
   JadeSVG,
   ReactSVG,
   ReduxSVG,
-  NodeSVG } from 'components';
+  NodeSVG,
+  SketchSVG } from 'components';
 
 export default class ProjectSection extends Component {
   static propTypes = {
@@ -79,6 +80,8 @@ export default class ProjectSection extends Component {
           return <ReduxSVG className={`${styles.skillLogo} hvr-float`} />;
         case 'NodeJS':
           return <NodeSVG className={`${styles.skillLogo} hvr-float`} />;
+        case 'Sketch':
+          return <SketchSVG className={`${styles.skillLogo} hvr-float`} />;
         default:
           throw new Error(`Unknow skill ${skill}`);
       }
@@ -94,11 +97,11 @@ export default class ProjectSection extends Component {
           { links &&
             <p>
               { links.website && <span>
-                  <i className="fa fa-globe"></i> <a href="https://frontend-bookmark.herokuapp.com">https://frontend-bookmark.herokuapp.com</a>
+                  <i className="fa fa-globe"></i> <a href={links.website}>{links.website}</a>
                 </span> }
               { links.website && links.github && <br /> }
               { links.github && <span>
-                  <i className="fa fa-github"></i> <a href="https://github.com/chuson1996/frontend-advisor">https://github.com/chuson1996/frontend-advisor</a>
+                  <i className="fa fa-github"></i> <a href={links.github}>{links.github}</a>
                 </span> }
             </p>
           }

@@ -1,0 +1,110 @@
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
+
+.sketchSVG {
+	.fillOrange {
+		fill: lighten(grayscale(#FDCA0D), 30%);
+		@include transition(fill .3s ease-in);
+	}
+	.c1, .c2, .c3 {
+		@include transition(stop-color .3s ease-in);
+	}
+
+	.lineGradient1 {
+		.c1 {stop-color: lighten(grayscale(#FDCA0D), 30%);}
+		.c2 {stop-color: lighten(grayscale(#FDCC13), 30%);}
+		.c3 {stop-color: lighten(grayscale(#FD7B00), 30%);}
+	}
+
+	.lineGradient4 {
+		.c1 {stop-color: lighten(grayscale(#FD7B00), 30%);}
+		.c2 {stop-color: lighten(grayscale(#F35300), 30%);}
+	}
+
+	.lineGradient5 {
+		.c1 {stop-color: lighten(grayscale(#FDCE1F), 30%);}
+		.c2 {stop-color: lighten(grayscale(#FDAC00), 30%);}
+	}
+
+	.lineGradient6 {
+		.c1 {stop-color: lighten(grayscale(#FDC003), 30%);}
+		.c2 {stop-color: lighten(grayscale(#FDD12B), 30%);}
+	}
+
+	.lineGradient7 {
+		.c1 {stop-color: lighten(grayscale(#FC8A00), 30%);}
+		.c2 {stop-color: lighten(grayscale(#FCAA00), 30%);}
+	}
+
+	.lineGradient8 {
+		.c1 {stop-color: lighten(grayscale(#FCB203), 30%);}
+		.c2 {stop-color: lighten(grayscale(#FEE68F), 30%);}
+	}
+
+	.lineGradient9 {
+		.c1 {stop-color: lighten(grayscale(#FEDE69), 30%);}
+		.c2 {stop-color: lighten(grayscale(#FEEDAD), 30%);}
+	}
+
+	.lineGradient10 {
+		.c1 {stop-color: lighten(grayscale(#FEDE69), 30%);}
+		.c2 {stop-color: lighten(grayscale(#FEEDAD), 30%);}
+	}
+
+	.lineGradient11 {
+		.c1 {stop-color: lighten(grayscale(#FDCC20), 30%);}
+		.c2 {stop-color: lighten(grayscale(#FFFFFF), 30%);}
+	}
+
+	&:hover {
+		.fillOrange {
+			fill: #FDCA0D;
+		}
+
+		.lineGradient1 {
+			.c1 {stop-color: #FDCA0D;}
+			.c2 {stop-color: #FDCC13;}
+			.c3 {stop-color: #FD7B00;}
+		}
+
+		.lineGradient4 {
+			.c1 {stop-color: #FD7B00;}
+			.c2 {stop-color: #F35300;}
+		}
+
+		.lineGradient5 {
+			.c1 {stop-color: #FDCE1F;}
+			.c2 {stop-color: #FDAC00;}
+		}
+
+		.lineGradient6 {
+			.c1 {stop-color: #FDC003;}
+			.c2 {stop-color: #FDD12B;}
+		}
+
+		.lineGradient7 {
+			.c1 {stop-color: #FC8A00;}
+			.c2 {stop-color: #FCAA00;}
+		}
+
+		.lineGradient8 {
+			.c1 {stop-color: #FCB203;}
+			.c2 {stop-color: #FEE68F;}
+		}
+
+		.lineGradient9 {
+			.c1 {stop-color: #FEDE69;}
+			.c2 {stop-color: #FEEDAD;}
+		}
+
+		.lineGradient10 {
+			.c1 {stop-color: #FEDE69;}
+			.c2 {stop-color: #FEEDAD;}
+		}
+
+		.lineGradient11 {
+			.c1 {stop-color: #FDCC20;}
+			.c2 {stop-color: #FFFFFF;}
+		}
+	}
+}
+

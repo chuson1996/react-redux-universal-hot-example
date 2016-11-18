@@ -1,21 +1,23 @@
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss';
+
 .webpackSvg {
 	.blue1,
 	.blue2,
 	.blue3,
 	.sBlue {
-		transition: fill .1s ease-in, stop-color .1s ease-in;
+		@include transition(fill .1s ease-in, stop-color .1s ease-in);
 	}
 	.blue1 {
-		stop-color: #e2e2e2;
+		stop-color: grayscale(#93B4E7);
 	}
 	.blue2 {
-		stop-color: #f2f2f2;
+		stop-color: grayscale(#B9D1F8);
 	}
 	.blue3 {
-		stop-color: #dbdbdb;
+		stop-color: grayscale(#9CB6E0);
 	}
 	.sBlue {
-		fill: #868686;
+		fill: grayscale(#6F95DB);
 	}
 }
 .webpackSvg:hover {

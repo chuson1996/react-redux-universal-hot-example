@@ -13,5 +13,6 @@ export JadeSVG from './JadeSVG/JadeSVG';
 export ReactSVG from './ReactSVG/ReactSVG';
 export ReduxSVG from './ReduxSVG/ReduxSVG';
 export NodeSVG from './NodeSVG/NodeSVG';
+export SketchSVG from './SketchSVG/SketchSVG';
 export Footer from './Footer/Footer';
 export ProjectSection from './ProjectSection/ProjectSection';
