@@ -126,6 +126,7 @@ export default class Home extends Component {
               title={<h3><a className="underline" href="https://2015.spaceappschallenge.org/project/water-mapping/">SPACE APPS MIKKELI</a></h3>}
               date="April 2015"
               description={<Row><Col sm={8} smOffset={2}>
+                  <p>2nd place</p>
                   <p>Our project was to create website where there is a water map, which shows which part of world water (river, lake) is usable.</p>
                 </Col></Row>}
               skills={['AngularJS']}
@@ -141,6 +142,7 @@ export default class Home extends Component {
               title={<h3><a className="underline" href="http://futurehack.fi/">Future Hack</a></h3>}
               date="April 2016"
               description={<Row><Col sm={8} smOffset={2}>
+                  <p>2nd place</p>
                   <p>Competition Product: Health Assistance Bot - An AI to befriend with a Telegram user to provide health tips and support</p>
                 </Col></Row>}
               skills={['NodeJS']}
