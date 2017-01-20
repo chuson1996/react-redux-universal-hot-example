@@ -13,7 +13,7 @@
   /* All devices */
   .imageDesktop,
   .imageMobile {
-    transition: transform .3s ease-in;
+    transition: transform .3s cubic-bezier(0.86, 0, 0.07, 1);
     @include box-shadow(0 0 20px 0px rgba(0, 0, 0, 0.51));
   }
 
@@ -99,5 +99,5 @@
   }
 }
 .projectSection + .projectSection {
-  margin-top: 20px;
+  margin-top: 160px;
 }

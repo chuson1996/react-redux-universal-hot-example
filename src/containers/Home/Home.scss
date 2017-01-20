@@ -9,93 +9,16 @@
     margin-bottom: 15px;
   }
 }
-.myFace {
-  width: 16em;
-  height: 16em;
-}
-.masthead {
-  background: $navbar-inverse-bg;
-  background-image: url('./hero.jpg');
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  text-align: left;
-  > div {
-    padding: 40px 20px 90px 20px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.71);
-    height: 100vh;
-    position: relative;
-    > div {
-      top: 50%;
-      transform: translateY(-50%);
-      position: absolute;
-      left: 0;
-      right: 0;
-    }
-  }
-  .myFace {
-    margin-top: 20px;
-    max-width: 100%;
-  }
-  h1 {
-    color: $cyan;
-    font-size: 4em;
-  }
-  h2 {
-    color: #ddd;
-    font-size: 2em;
-    margin: 20px 0;
-  }
-  h3, h4 {
-    color: #ddd;
-    margin: 20px 0 30px 0;
-  }
-  a {
-    color: #ddd;
-  }
-  p {
-    margin: 10px 0;
-  }
-  .humility {
-    color: $humility;
-    a {
-      color: $humility;
-    }
-  }
-  .github {
-    font-size: 1.5em;
-  }
-}
-
-.aboutMe {
-  :global(.modal-dialog) > :global(.modal-content) > :global(.modal-body) > :global(.row) {
-    margin-left: 0;
-  }
-  .left, .right {
-    padding: 15px;
-  }
-  .right {
-    background-color: #fff;
-  }
-  .left {
-    h1, h2, h3, h4, h5, p {
-      color: #fff;
-    }
-
-  }
-  .headline {
-
-  }
-  .subheadline {
-
-  }
-}
 
 .skillLogo {
   width: 50px;
   max-height: 60px;
 }
 
-
+.aboutMe {
+  background-color: $navbar-inverse-bg;
+  color: #fff;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}

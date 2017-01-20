@@ -48,7 +48,7 @@ export default class App extends Component {
 
     return (
       <div className={styles.app}>
-        <Helmet {...config.app.head}/>
+        <Helmet {...config.app}/>
         {/* <Navbar fixedTop bsStyle="inverse">
           <Navbar.Header>
             <Navbar.Toggle/>

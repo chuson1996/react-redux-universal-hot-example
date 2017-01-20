@@ -1,10 +1,12 @@
 import React, { Component, PropTypes } from 'react';
+import ImageZoom from 'react-medium-image-zoom';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
 import Image from 'react-bootstrap/lib/Image';
 import Tooltip from 'react-bootstrap/lib/Tooltip';
-import classNames from 'classnames';
+import Waypoint from 'react-waypoint';
+import c from 'classnames';
 import {
   AngularSVG,
   GruntSVG,
@@ -13,7 +15,7 @@ import {
   ReactSVG,
   ReduxSVG,
   NodeSVG,
-  SketchSVG } from 'components';
+  SketchSVG } from 'components/SVGs';
 
 export default class ProjectSection extends Component {
   static propTypes = {
@@ -25,6 +27,17 @@ export default class ProjectSection extends Component {
     date: PropTypes.string,
     reverseOrder: PropTypes.bool,
     links: PropTypes.object
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      inView: false
+    };
+  }
+
+  flyIn = () => {
+    this.setState({ inView: true });
   };
 
   render() {
@@ -88,9 +101,12 @@ export default class ProjectSection extends Component {
     });
     return (
       <Row className={styles.projectSection}>
+        <Waypoint onEnter={this.flyIn} />
         <Col {...firstColProps}
-          data-scroll-watch
-          data-animate={animation.leftCol}>
+          className={c('animated', { [animation.leftCol]: this.state.inView })}
+          // data-scroll-watch
+          // data-animate={animation.leftCol}
+        >
           {title}
           <p>{date}</p>
           {description}
@@ -115,15 +131,24 @@ export default class ProjectSection extends Component {
         </Col>
         { images && !!images.length &&
           <Col {...secondColProps}
-            className={classNames(styles.imagesContainer, { [styles.reverseOrder]: reverseOrder })}
-            data-scroll-watch
-            data-animate={animation.rightCol}>
-            { images.map(({ className, platform, ...others }, index) =>
-              <Image
+            className={c(styles.imagesContainer, { [styles.reverseOrder]: reverseOrder }, 'animated', { [animation.rightCol]: this.state.inView })}
+          >
+            { images.map(({ className, platform, src, ...others }, index) =>
+              <ImageZoom
                 key={index}
-                className={classNames(className, { [styles.imageDesktop]: platform === 'desktop', [styles.imageMobile]: platform === 'mobile' })}
-                thumbnail
-                {...others} />
+                image={{
+                  src,
+                  className: c('img-thumbnail', className, { [styles.imageDesktop]: platform === 'desktop', [styles.imageMobile]: platform === 'mobile' })
+                }}
+                zoomImage={{
+                  src
+                }} />
+              // <Image
+              //   key={index}
+              //   src={src}
+              //   className={c(className, { [styles.imageDesktop]: platform === 'desktop', [styles.imageMobile]: platform === 'mobile' })}
+              //   thumbnail
+              //   {...others} />
             )}
           </Col>
         }

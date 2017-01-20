@@ -6,13 +6,7 @@
  */
 
 export TypewriterText from './TypewriterText/TypewriterText';
-export AngularSVG from './AngularSVG/AngularSVG';
-export GruntSVG from './GruntSVG/GruntSVG';
-export WebpackSVG from './WebpackSVG/WebpackSVG';
-export JadeSVG from './JadeSVG/JadeSVG';
-export ReactSVG from './ReactSVG/ReactSVG';
-export ReduxSVG from './ReduxSVG/ReduxSVG';
-export NodeSVG from './NodeSVG/NodeSVG';
-export SketchSVG from './SketchSVG/SketchSVG';
 export Footer from './Footer/Footer';
 export ProjectSection from './ProjectSection/ProjectSection';
+export MastHead from './MastHead/MastHead';
+export MouseFocus from './MouseFocus/MouseFocus';

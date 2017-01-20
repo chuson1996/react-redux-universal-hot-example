@@ -1,25 +1,8 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router';
-// import { CounterButton, GithubButton } from 'components';
-// import config from '../../config';
 import Helmet from 'react-helmet';
-// import className from 'classnames';
-import Button from 'react-bootstrap/lib/Button';
-// import Modal from 'react-bootstrap/lib/Modal';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
-import Image from 'react-bootstrap/lib/Image';
-// import Tooltip from 'react-bootstrap/lib/Tooltip';
-// import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-import { TypewriterText,
-  // AngularSVG,
-  // GruntSVG,
-  // WebpackSVG,
-  // JadeSVG,
-  // ReactSVG,
-  // ReduxSVG,
-  // NodeSVG,
-  ProjectSection } from 'components';
+import { ProjectSection, MastHead } from 'components';
 
 export default class Home extends Component {
   constructor(props) {
@@ -47,39 +30,8 @@ export default class Home extends Component {
           <div>
             <Row>
               <Col xs={12}>
-                <Image className={styles.myFace} src={require('./myFace.jpg')} thumbnail responsive />
-                <h2>
-                  <TypewriterText text="Chu Hoang Son" />
-                </h2>
-                <h4>
-                  <TypewriterText text="Front-end Developer" />
-                </h4>
-                {/* <Button
-                  bsStyle="warning"
-                  className="hvr-grow-rotate"
-                  onClick={() => this.open()}>ABOUT ME</Button> */}
-                <br/><br/>
-                <a target="_blank" href="https://www.facebook.com/holdmyhandifyoucan" style={{ borderBottom: 0 }}>
-                  <Button bsStyle="info" className="hvr-sweep-to-top">
-                    <i className="fa fa-facebook m-l-3"></i>
-                  </Button>
-                </a>
-                <a target="_blank" href="https://github.com/chuson1996/web-portfolio" style={{ borderBottom: 0 }}>
-                  <Button bsStyle="default" className="m-l-10 hvr-sweep-to-top">
-                    <i className="fa fa-github m-l-3"></i>
-                  </Button>
-                </a>
-                <a target="_blank" href="https://fi.linkedin.com/in/chu-hoang-son-b92499a5" style={{ borderBottom: 0 }}>
-                  <Button bsStyle="primary" className="m-l-10 hvr-sweep-to-top">
-                    <i className="fa fa-linkedin m-l-3"></i>
-                  </Button>
-                </a>
+                <MastHead/>
               </Col>
-              {/* <Col xs={12} sm={6} className="text-center">
-                <img
-                  className={styles.myFace}
-                  src={require('./face.jpg')}/>
-              </Col> */}
             </Row>
           </div>
         </div>
@@ -156,9 +108,7 @@ export default class Home extends Component {
 
         <div className={styles.sideProjects}>
           <div className="container text-center">
-            <h2
-              data-scroll-watch
-              data-animate="pulse">SIDE PROJECTS</h2>
+            <h2>SIDE PROJECTS</h2>
 
             <ProjectSection
               animation={{ leftCol: 'fadeInRight', rightCol: 'fadeInLeft'}}
@@ -169,7 +119,7 @@ export default class Home extends Component {
                 website: 'https://frodev.herokuapp.com',
                 github: 'https://github.com/chuson1996/frontend-advisor'
               }}
-              skills={['ReactJS', 'Redux', 'Sketch']}
+              skills={['NodeJS', 'ReactJS', 'Redux', 'Sketch']}
               images={[{
                 src: require('./frontendbookmark-mobile.png'),
                 platform: 'mobile'
@@ -193,7 +143,7 @@ export default class Home extends Component {
               animation={{leftCol: 'bounceInLeft', rightCol: 'bounceInRight'}}
               title="SpeedVocab (ReactJS)"
               date="June 2016 - July 2016"
-              description="I rebuilt SpeedVocab to learn ReactJS. But this time, instead of re-inventing the wheel, I integrateed Quizlet into my application and added what it didn't have: Word usage and unlimited images. I also practiced the behavior of good UX."
+              description="A web app to study vocabulary using Quizlet API."
               links={{
                 website: 'http://speedvocab2.herokuapp.com',
                 github: 'github.com/chuson1996/SpeedVocab-React'
@@ -206,24 +156,25 @@ export default class Home extends Component {
                 src: require('./speedvocab-react-desktop.png'),
                 platform: 'desktop'
               }]} />
+          </div>
+        </div>
 
-            {/* <ProjectSection
-              animation={{ leftCol: 'fadeInRight', rightCol: 'fadeInLeft'}}
-              title="SpeedVocab (Angular)"
-              date=""
-              description="I built this project to serve the purpose of passing my Finnish exam."
-              links={{
-                website: 'http://chuson.herokuapp.com/',
-                github: 'https://github.com/chuson1996/SpeedVocab'
-              }}
-              skills={['AngularJS', 'Grunt']}
-              images={[{
-                src: require('./speedvocab-angular-tablet.png'),
-                platform: 'mobile'
-              }, {
-                src: require('./speedvocab-angular-desktop.png'),
-                platform: 'desktop'
-              }]} /> */}
+        <div className={`${styles.aboutMe}`}>
+          <div className="container">
+            <Row>
+              <Col xs={12}>
+                <h1>WHO AM I?</h1>
+                <p>I am that person who's deeply in love with front-end development. Though things change and evolve notably fast in this field but that's one of the reasons why I love it. I genuinely believe that learning web development is fascinating. Thus I share my work on social media.</p>
+
+                <h2><a target="_blank" href="https://www.youtube.com/channel/UCE7Y95L1btz6qQkfyFfYFQA">Youtube (Latest Video)</a></h2>
+                <iframe src="https://www.youtube.com/embed/SJxkVVJZ-7E" frameborder="0" allowfullscreen></iframe>
+
+
+                <br/><br/><br/>
+                <h2><a target="_blank" href="https://www.instagram.com/code_everyday/">Instagram</a></h2>
+                <ul className="juicer-feed" data-feed-id="code_everyday"></ul>
+              </Col>
+            </Row>
           </div>
         </div>
       </div>

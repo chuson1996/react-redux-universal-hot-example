@@ -10,11 +10,25 @@ const environment = {
 }[process.env.NODE_ENV || 'development'];
 
 module.exports = Object.assign({
-  host: process.env.HOST || 'localhost',
+  host: process.env.HOST || '0.0.0.0',
   port: process.env.PORT,
   app: {
     title: 'Son Chu Hoang: Front-end Developer',
     description: 'Son Chu: Front-end Developer',
+    link: [
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: '//assets.juicer.io/embed.css',
+        media: 'all'
+      }
+    ],
+    script: [
+      {
+        src: '//assets.juicer.io/embed.js',
+        type: 'text/javascript'
+      }
+    ],
     head: {
       titleTemplate: 'Son Chu: Front-end Developer: %s',
       meta: [

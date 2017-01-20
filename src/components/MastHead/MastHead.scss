@@ -1,0 +1,89 @@
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../theme/variables.scss';
+
+.segmenter__background,
+.segmenter__piece {
+  background-image: url('./hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.segmenter {
+  width: 100vw;
+  height: 100vh;
+  /*position: relative;*/
+}
+
+.segmenter__background,
+.segmenter__pieces,
+.segmenter__piece_wrap,
+.segmenter__piece,
+.segmenter__body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.segmenter__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.71);
+}
+
+.segmenter__body h1 {
+  z-index: 2;
+}
+
+.segmenter__body h1 span {
+  margin-left: 15px;
+}
+
+.segmenter__piece-wrap {
+  transform: translateZ(13px);
+  /*transform-style: preserve-3d;*/
+}
+
+.segmenter__pieces {
+  perspective: 400px;
+}
+
+.segmenter__shadow {
+  position: absolute;
+  box-shadow: 0px -1px 15px 2px rgba(0, 0, 0, 0.58);
+}
+
+.mastHead {
+  .myFace {
+    margin-top: 20px;
+    max-width: 100%;
+    width: 16em;
+    height: 16em;
+  }
+  h1 {
+    color: $cyan;
+    font-size: 4em;
+  }
+  h2 {
+    color: #ddd;
+    font-size: 1.75em;
+    margin: 20px 0;
+  }
+  h3, h4 {
+    color: #ddd;
+    margin: 20px 0 30px 0;
+  }
+  a {
+    color: #ddd;
+  }
+  p {
+    margin: 10px 0;
+  }
+  .content {
+    text-align: center;
+    width: 100%;
+  }
+}
