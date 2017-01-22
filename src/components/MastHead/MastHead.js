@@ -50,11 +50,6 @@ export default class SegmentEffect extends Component {
 
   componentDidMount() {
     this.startAnimation();
-    window.addEventListener('mousemove', this.onMouseMove);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('mousemove', this.onMouseMove);
   }
 
   onMouseMove = (e) => {
@@ -86,7 +81,7 @@ export default class SegmentEffect extends Component {
   render() {
     const s = require('./MastHead.scss');
     return (
-      <div className={`${s.segmenter} ${s.mastHead}`}>
+      <div onMouseMove={this.onMouseMove} className={`${s.segmenter} ${s.mastHead}`}>
         <div className={s.segmenter__background}>
         </div>
         <Motion

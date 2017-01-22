@@ -3,7 +3,7 @@ import ImageZoom from 'react-medium-image-zoom';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import OverlayTrigger from 'react-bootstrap/lib/OverlayTrigger';
-import Image from 'react-bootstrap/lib/Image';
+// import Image from 'react-bootstrap/lib/Image';
 import Tooltip from 'react-bootstrap/lib/Tooltip';
 import Waypoint from 'react-waypoint';
 import c from 'classnames';
